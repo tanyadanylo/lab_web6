@@ -4,6 +4,8 @@ import ProductCard from './ProductCard';
 import parfume1 from '../assets/parfume1.jpg'
 import parfume2 from '../assets/parfume2.jpg'
 import parfume3 from '../assets/parfume3.jpg'
+import Button from './Button';
+
 
 
 const productsData = [
@@ -46,9 +48,11 @@ function ProductList() {
         
       </div>
 
-      <button className={styles.viewMoreButton}>
+    <div className={styles.butonhp} >
+      <Button>
         View more
-      </button>
+      </Button>
+    </div>
       
     </section>
   );

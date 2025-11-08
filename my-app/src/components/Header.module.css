@@ -30,7 +30,7 @@
 .navLink {
   text-decoration: none;
   color: #000000c3;
-  font-weight:500;
+  font-weight: 500;
   font-size: 18px; 
   padding: 8px 16px;
   border-radius: 10px; 
@@ -48,9 +48,37 @@
   font-weight: 500;
 }
 
-.cartContainer {
+.utilityContainer {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchForm {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.searchInput {
+  border: none;
+  border-radius: 25px;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchButton {
+  border: none;
+  background-color: #ababab7a;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cartLink {

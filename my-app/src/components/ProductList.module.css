@@ -28,3 +28,9 @@
 .viewMoreButton:hover {
   background-color: #10005f;
 }
+
+.butonhp{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

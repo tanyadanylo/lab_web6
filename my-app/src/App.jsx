@@ -1,14 +1,22 @@
-import Footer from './components/Footer';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header'; 
-import Hero from './components/Hero';
-import ProductList from './components/ProductList';
+import Footer from './components/Footer';
+
+import HomePage from './pages/HomePage';
+import CatalogPage from './pages/CatalogPage';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero/>
-      <ProductList />
+      <main>
+        <Routes>
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/catalog" element={ <CatalogPage /> } />
+        </Routes>
+      </main>
       <Footer/>
     </div>
   );
