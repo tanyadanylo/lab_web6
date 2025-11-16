@@ -97,3 +97,12 @@
   color: #000000c3;
   margin: 12px 0;
 }
+
+.linkWrapper {
+  text-decoration: none;
+  color: inherit;
+  
+  margin-top: auto; 
+  display: flex;
+  justify-content: center;
+}

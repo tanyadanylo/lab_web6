@@ -4,7 +4,6 @@ import ProductCard from './ProductCard';
 import parfume1 from '../assets/parfume1.jpg'
 import parfume2 from '../assets/parfume2.jpg'
 import parfume3 from '../assets/parfume3.jpg'
-import Button from './Button';
 
 
 
@@ -47,13 +46,6 @@ function ProductList() {
         ))}
         
       </div>
-
-    <div className={styles.butonhp} >
-      <Button>
-        View more
-      </Button>
-    </div>
-      
     </section>
   );
 }

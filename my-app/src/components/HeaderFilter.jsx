@@ -1,57 +1,64 @@
 import React from 'react';
 import styles from './HeaderFilter.module.css';
 import Select from './Select'; 
-import Button from './Button';
-
+import Button from './Button'; 
 const sexOptions = [
-  { value: 'woman', label: 'Woman' },
-  { value: 'man', label: 'Man' }
+  { value: '', label: 'All Genders' },
+  { value: 'Woman', label: 'Woman' },
+  { value: 'Man', label: 'Man' }
 ];
 
 const countryOptions = [
-  { value: 'france', label: 'France' },
-  { value: 'usa', label: 'USA' }
+  { value: '', label: 'All Countries' },
+  { value: 'France', label: 'France' },
+  { value: 'USA', label: 'USA' }
 ];
 
 const brandOptions = [
-  { value: 'dior', label: 'Dior' },
-  { value: 'chanel', label: 'Chanel' },
-  { value: 'herrera', label: 'Carolina Herrera' },
-  { value: 'givenchy', label: 'Givenchy' },
-  { value: 'prada', label: 'Prada' }
+  { value: '', label: 'All Brands' },
+  { value: 'DIOR', label: 'Dior' },
+  { value: 'CHANEL', label: 'Chanel' },
+  { value: 'CAROLINA HERRERA', label: 'Carolina Herrera' },
+  { value: 'GIVENCHY', label: 'Givenchy' },
+  { value: 'Phantom', label: 'Phantom' }
 ];
 
-function HeaderFilter() {
+function HeaderFilter({
+  selectedSex,
+  setSelectedSex,
+  selectedCountry,
+  setSelectedCountry,
+  selectedBrand,
+  setSelectedBrand
+}) {
     return(
         <section className={styles.filterSection}>
-
             <div className={styles.filterBar}>
                 
                 <Select 
-                  label="Man or Woman" 
+                  label="Sex" 
                   name="filter-sex" 
-                  options={sexOptions} 
+                  options={sexOptions}
+                  value={selectedSex} 
+                  onChange={(e) => setSelectedSex(e.target.value)} 
                 />
 
                 <Select 
                   label="Made in" 
                   name="filter-country" 
-                  options={countryOptions} 
+                  options={countryOptions}
+                  value={selectedCountry} 
+                  onChange={(e) => setSelectedCountry(e.target.value)} 
                 />
 
                 <Select 
                   label="Brand" 
                   name="filter-brand" 
-                  options={brandOptions} 
+                  options={brandOptions}
+                  value={selectedBrand} 
+                  onChange={(e) => setSelectedBrand(e.target.value)} 
                 />
-                
-                <div className={styles.applyButtonContainer}>
-                  <Button>
-                      Apply
-                  </Button>
-                </div>
             </div>
-        
         </section>
     )
 }
